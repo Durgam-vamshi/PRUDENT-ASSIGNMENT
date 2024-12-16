@@ -33,7 +33,7 @@ const AddEditBookPage = ({ isEdit }) => {
     if (isEdit && id) {
       setIsLoading(true); 
       axios
-        .get(`http://localhost:5000/api/books/${id}`)
+        .get(`https://prudent-assignment.onrender/api/books/${id}`)
         .then((bookResponse) => {
           setBook(bookResponse.data);
           setIsLoading(false); 
@@ -70,7 +70,7 @@ const AddEditBookPage = ({ isEdit }) => {
     };
 
     setIsLoading(true); 
-    const url = isEdit ? `http://localhost:5000/api/books/${id}` : 'http://localhost:5000/api/books';
+    const url = isEdit ? `https://prudent-assignment.onrender.com//api/books/${id}` : 'https://prudent-assignment.onrender.com/api/books';
     const method = isEdit ? 'put' : 'post';
 
     axios({
