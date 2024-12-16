@@ -12,7 +12,7 @@ function BookInfoPage() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/books/${id}`)
+      .get(`https://prudent-assignment.onrender.com/api/books/${id}`)
       .then((response) => {
         setBook(response.data);  
         setLoading(false);
