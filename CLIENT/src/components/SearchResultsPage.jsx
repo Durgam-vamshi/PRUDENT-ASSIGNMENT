@@ -29,7 +29,7 @@ function SearchResultsPage() {
     setError(null);
 
     axios
-      .get(`http://localhost:5000/api/books?query=${query}&page=${currentPage}&limit=${itemsPerPage}`)
+      .get(`https://prudent-assignment.onrender.com/api/books?query=${query}&page=${currentPage}&limit=${itemsPerPage}`)
       .then((response) => {
         if (response.data.books) {
           setBooks(response.data.books);
@@ -51,7 +51,7 @@ function SearchResultsPage() {
   
   const confirmDelete = () => {
     axios
-      .delete(`http://localhost:5000/api/books/${bookToDelete}`)
+      .delete(`https://prudent-assignment.onrender.com/api/books/${bookToDelete}`)
       .then(() => {
         alert('Book deleted successfully');
         setBooks((prevBooks) => prevBooks.filter((book) => book.BookID !== bookToDelete));
