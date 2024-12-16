@@ -1,0 +1,14 @@
+# Node.js
+node_modules/
+
+# Build artifacts
+/dist
+/build
+
+# Logs
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+git commit -m "first commit"
